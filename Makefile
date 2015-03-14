@@ -1,7 +1,7 @@
-OBJECTS = loader.o kmain.o io.o framebuffer_driver.o serial_driver.o
+OBJECTS = loader.o kmain.o io.o framebuffer_driver.o serial_driver.o gdt.o system.o
 CC = gcc
 CFLAGS = -m32 -nostdlib -nostdinc -fno-builtin -fno-stack-protector \
-		 -nostartfiles -nodefaultlibs -Wall -Wextra -Werror -c -std=c11
+		 -nostartfiles -nodefaultlibs -Wall -Wextra -Werror -c -std=c99
 LDFLAGS = -T link.ld -melf_i386
 AS = nasm
 ASFLAGS = -f elf
